@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject private var beerVM = BeerListViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        BeerView(beers: self.beerVM.beers)
     }
 }
 

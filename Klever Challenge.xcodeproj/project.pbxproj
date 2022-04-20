@@ -18,6 +18,7 @@
 		064644F528109F6F001EFDDC /* NetworkConn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644F428109F6F001EFDDC /* NetworkConn.swift */; };
 		064644F72810A270001EFDDC /* BeerModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644F62810A270001EFDDC /* BeerModelAdapter.swift */; };
 		064644FB2810A84F001EFDDC /* BeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644FA2810A84F001EFDDC /* BeerViewModel.swift */; };
+		064644FF2810AB18001EFDDC /* BeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644FE2810AB18001EFDDC /* BeerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		064644F428109F6F001EFDDC /* NetworkConn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConn.swift; sourceTree = "<group>"; };
 		064644F62810A270001EFDDC /* BeerModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModelAdapter.swift; sourceTree = "<group>"; };
 		064644FA2810A84F001EFDDC /* BeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewModel.swift; sourceTree = "<group>"; };
+		064644FE2810AB18001EFDDC /* BeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				064644FA2810A84F001EFDDC /* BeerViewModel.swift */,
+				064644FE2810AB18001EFDDC /* BeerView.swift */,
 			);
 			path = BeerList;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			files = (
 				064644FB2810A84F001EFDDC /* BeerViewModel.swift in Sources */,
 				064644F528109F6F001EFDDC /* NetworkConn.swift in Sources */,
+				064644FF2810AB18001EFDDC /* BeerView.swift in Sources */,
 				064644C9281099E3001EFDDC /* ContentView.swift in Sources */,
 				064644F72810A270001EFDDC /* BeerModelAdapter.swift in Sources */,
 				064644F328109E73001EFDDC /* Beer.swift in Sources */,
