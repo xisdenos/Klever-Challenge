@@ -17,6 +17,7 @@
 		064644F328109E73001EFDDC /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644F228109E73001EFDDC /* Beer.swift */; };
 		064644F528109F6F001EFDDC /* NetworkConn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644F428109F6F001EFDDC /* NetworkConn.swift */; };
 		064644F72810A270001EFDDC /* BeerModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644F62810A270001EFDDC /* BeerModelAdapter.swift */; };
+		064644FB2810A84F001EFDDC /* BeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644FA2810A84F001EFDDC /* BeerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		064644F228109E73001EFDDC /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		064644F428109F6F001EFDDC /* NetworkConn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConn.swift; sourceTree = "<group>"; };
 		064644F62810A270001EFDDC /* BeerModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModelAdapter.swift; sourceTree = "<group>"; };
+		064644FA2810A84F001EFDDC /* BeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		064644C5281099E3001EFDDC /* Klever Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				064644F82810A811001EFDDC /* Screens */,
 				064644F028109E11001EFDDC /* Service */,
 				064644C6281099E3001EFDDC /* Klever_ChallengeApp.swift */,
 				064644C8281099E3001EFDDC /* ContentView.swift */,
@@ -150,6 +153,22 @@
 				064644F228109E73001EFDDC /* Beer.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		064644F82810A811001EFDDC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				064644F92810A81F001EFDDC /* BeerList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		064644F92810A81F001EFDDC /* BeerList */ = {
+			isa = PBXGroup;
+			children = (
+				064644FA2810A84F001EFDDC /* BeerViewModel.swift */,
+			);
+			path = BeerList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064644FB2810A84F001EFDDC /* BeerViewModel.swift in Sources */,
 				064644F528109F6F001EFDDC /* NetworkConn.swift in Sources */,
 				064644C9281099E3001EFDDC /* ContentView.swift in Sources */,
 				064644F72810A270001EFDDC /* BeerModelAdapter.swift in Sources */,
