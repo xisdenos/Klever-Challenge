@@ -16,6 +16,7 @@
 		064644E4281099E5001EFDDC /* Klever_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644E3281099E5001EFDDC /* Klever_ChallengeUITestsLaunchTests.swift */; };
 		064644F328109E73001EFDDC /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644F228109E73001EFDDC /* Beer.swift */; };
 		064644F528109F6F001EFDDC /* NetworkConn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644F428109F6F001EFDDC /* NetworkConn.swift */; };
+		064644F72810A270001EFDDC /* BeerModelAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644F62810A270001EFDDC /* BeerModelAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		064644E3281099E5001EFDDC /* Klever_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Klever_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		064644F228109E73001EFDDC /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		064644F428109F6F001EFDDC /* NetworkConn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConn.swift; sourceTree = "<group>"; };
+		064644F62810A270001EFDDC /* BeerModelAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModelAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				064644F128109E4D001EFDDC /* Entities */,
 				064644F428109F6F001EFDDC /* NetworkConn.swift */,
+				064644F62810A270001EFDDC /* BeerModelAdapter.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				064644F528109F6F001EFDDC /* NetworkConn.swift in Sources */,
 				064644C9281099E3001EFDDC /* ContentView.swift in Sources */,
+				064644F72810A270001EFDDC /* BeerModelAdapter.swift in Sources */,
 				064644F328109E73001EFDDC /* Beer.swift in Sources */,
 				064644C7281099E3001EFDDC /* Klever_ChallengeApp.swift in Sources */,
 			);
