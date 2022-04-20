@@ -14,6 +14,7 @@
 		064644D8281099E5001EFDDC /* Klever_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644D7281099E5001EFDDC /* Klever_ChallengeTests.swift */; };
 		064644E2281099E5001EFDDC /* Klever_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644E1281099E5001EFDDC /* Klever_ChallengeUITests.swift */; };
 		064644E4281099E5001EFDDC /* Klever_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644E3281099E5001EFDDC /* Klever_ChallengeUITestsLaunchTests.swift */; };
+		064644F328109E73001EFDDC /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064644F228109E73001EFDDC /* Beer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		064644DD281099E5001EFDDC /* Klever ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Klever ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		064644E1281099E5001EFDDC /* Klever_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Klever_ChallengeUITests.swift; sourceTree = "<group>"; };
 		064644E3281099E5001EFDDC /* Klever_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Klever_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		064644F228109E73001EFDDC /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		064644C5281099E3001EFDDC /* Klever Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				064644F028109E11001EFDDC /* Service */,
 				064644C6281099E3001EFDDC /* Klever_ChallengeApp.swift */,
 				064644C8281099E3001EFDDC /* ContentView.swift */,
 				064644CA281099E5001EFDDC /* Assets.xcassets */,
@@ -125,6 +128,22 @@
 				064644E3281099E5001EFDDC /* Klever_ChallengeUITestsLaunchTests.swift */,
 			);
 			path = "Klever ChallengeUITests";
+			sourceTree = "<group>";
+		};
+		064644F028109E11001EFDDC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				064644F128109E4D001EFDDC /* Entities */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		064644F128109E4D001EFDDC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				064644F228109E73001EFDDC /* Beer.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				064644C9281099E3001EFDDC /* ContentView.swift in Sources */,
+				064644F328109E73001EFDDC /* Beer.swift in Sources */,
 				064644C7281099E3001EFDDC /* Klever_ChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
