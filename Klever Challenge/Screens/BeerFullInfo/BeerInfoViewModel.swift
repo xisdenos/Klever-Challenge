@@ -14,4 +14,8 @@ class BeerInfo {
     init(beer: Beer) {
         self.beer = beer
     }
+    
+    func delete(beer: Beer) {
+        return
+    }
 }

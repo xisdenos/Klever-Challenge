@@ -21,23 +21,26 @@ struct BeerView: View {
                 ForEach(self.beers, id:\.id) { beer in
                     NavigationLink(destination: BeerInfoView(beerModel: BeerInfo(beer: beer).beer)) {
                         BeerCellView(beer: beer)
+                        
                     }
                 }
             }
-            .navigationBarTitle("Beers List")
+        }
+        .navigationBarTitle("Beers List")
+    }
+}
+
+
+    struct BeerView_Previews: PreviewProvider {
+        static var previews: some View {
+            BeerView(beers: [Beer(id: 9999,
+                                  name: "generic_beer",
+                                  tagline: "generic beer",
+                                  description: "generic description",
+                                  image_url: "https://images.punkapi.com/v2/keg.png")])
         }
     }
 
-struct BeerView_Previews: PreviewProvider {
-    static var previews: some View {
-        BeerView(beers: [Beer(id: 9999,
-                              name: "generic_beer",
-                              tagline: "generic beer",
-                              description: "generic description",
-                              image_url: "https://images.punkapi.com/v2/keg.png")])
-    }
-}
-}
 
 struct BeerCellView: View {
     
@@ -64,3 +67,4 @@ struct BeerCellView: View {
         }
     }
 }
+

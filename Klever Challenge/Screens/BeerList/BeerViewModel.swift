@@ -25,4 +25,6 @@ class BeerListViewModel: ObservableObject {
             }
         }
     }
+    
+    //
 }
