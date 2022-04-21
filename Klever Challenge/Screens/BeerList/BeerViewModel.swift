@@ -26,5 +26,7 @@ class BeerListViewModel: ObservableObject {
         }
     }
     
-    //
+    func delete(beer: Beer) {
+        print(beer.name)
+    }
 }

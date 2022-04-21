@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BeerInfo {
+class BeerInfoViewModel {
     
     let beer: Beer
     
@@ -15,7 +15,7 @@ class BeerInfo {
         self.beer = beer
     }
     
-    func delete(beer: Beer) {
-        return
+    func delete() {
+        print("delete")
     }
 }
