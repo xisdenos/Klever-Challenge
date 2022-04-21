@@ -24,14 +24,14 @@ struct BeerInfoView: View {
             
             HStack{
                 Button {
-                    print("Edita")
+                    viewModel.editBeer()
                 } label: {
                     Label("Edita", systemImage: "pencil")
                 }
                 
                 
                 Button {
-                    viewModel.delete()
+                    viewModel.deleteBeer()
                 } label: {
                     Label("Delete", systemImage: "trash")
                 }.foregroundColor(.red)

@@ -15,7 +15,13 @@ class BeerInfoViewModel {
         self.beer = beer
     }
     
-    func delete() {
+    func deleteBeer() {
+        //Todo - delete function
         print("delete")
+    }
+    
+    func editBeer() {
+        //Todo - edit function
+        print("edita")
     }
 }
