@@ -19,6 +19,7 @@ struct BeerInfoView: View {
             
             Text(beerModel.tagline)
                 .font(.title3)
+                .padding()
             
             AsyncImage(url: URL(string: beerModel.image_url)) { phase in
                 phase.resizable()
@@ -27,6 +28,7 @@ struct BeerInfoView: View {
             }.frame(width: 150, height: 360)
             
             Text(beerModel.description)
+                .padding()
         }
     }
 }
