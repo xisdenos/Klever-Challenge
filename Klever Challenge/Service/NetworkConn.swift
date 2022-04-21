@@ -14,7 +14,7 @@ protocol NetworkConnectionProtocol {
 
 class NetworkConnection: NetworkConnectionProtocol {
     
-    let base_URL:String = "https://api.punkapi.com/v2/beers"
+    private let base_URL:String = "https://api.punkapi.com/v2/beers"
     
     func makeRequest(completion: @escaping (Data?) -> ()) {
         

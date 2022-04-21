@@ -22,8 +22,7 @@ class BeerListViewModel: ObservableObject {
                 DispatchQueue.main.sync {
                     self.beers = beer
                 }
-        }
-            
+            }
         }
     }
 }

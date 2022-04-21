@@ -19,9 +19,12 @@ struct BeerView: View {
         NavigationView{
             List {
                 ForEach(self.beers, id:\.id) { beer in
-                    BeerCellView(beer: beer)
+                    NavigationLink(destination: BeerInfoView(beerModel: BeerInfo(beer: beer).beer)) {
+                        BeerCellView(beer: beer)
+                    }
                 }
             }
+            .navigationBarTitle("Beers List")
         }
     }
 
