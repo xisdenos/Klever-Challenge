@@ -17,9 +17,9 @@ struct BeerView: View {
     
     var body: some View {
         NavigationView{
-        List {
-            ForEach(self.beers, id:\.id) { beer in
-                BeerCellView(beer: beer)
+            List {
+                ForEach(self.beers, id:\.id) { beer in
+                    BeerCellView(beer: beer)
                 }
             }
         }
@@ -46,7 +46,7 @@ struct BeerCellView: View {
                 phase.resizable()
             } placeholder: {
                 ProgressView()
-            }.frame(width: 110, height: 260)
+            }.frame(width: 100, height: 260)
             
                 .padding()
             VStack{
