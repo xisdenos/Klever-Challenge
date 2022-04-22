@@ -36,8 +36,6 @@ struct BeerView: View {
                     .sheet(isPresented: $showModal) {
                         AddNewBeerView(isPresented: self.$showModal)
                     }
-                
-                
             }
         }
     }
