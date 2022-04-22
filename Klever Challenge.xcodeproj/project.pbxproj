@@ -28,6 +28,10 @@
 		0646451528132905001EFDDC /* BeerInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646451428132905001EFDDC /* BeerInfoCell.swift */; };
 		0646451728132A28001EFDDC /* BeerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646451628132A28001EFDDC /* BeerListCell.swift */; };
 		0646451A28132ED4001EFDDC /* BeerModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646451928132ED4001EFDDC /* BeerModel+Extensions.swift */; };
+		064645202813411F001EFDDC /* NetworkConnectionMockSucess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646451F2813411F001EFDDC /* NetworkConnectionMockSucess.swift */; };
+		06464522281342C1001EFDDC /* BeerModelAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06464521281342C1001EFDDC /* BeerModelAdapterTest.swift */; };
+		0646452628135684001EFDDC /* NetworkConnectionMockNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646452528135684001EFDDC /* NetworkConnectionMockNil.swift */; };
+		0646452828135B1D001EFDDC /* NetworkConnectionMockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646452728135B1D001EFDDC /* NetworkConnectionMockError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		0646451428132905001EFDDC /* BeerInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerInfoCell.swift; sourceTree = "<group>"; };
 		0646451628132A28001EFDDC /* BeerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCell.swift; sourceTree = "<group>"; };
 		0646451928132ED4001EFDDC /* BeerModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeerModel+Extensions.swift"; sourceTree = "<group>"; };
+		0646451F2813411F001EFDDC /* NetworkConnectionMockSucess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionMockSucess.swift; sourceTree = "<group>"; };
+		06464521281342C1001EFDDC /* BeerModelAdapterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModelAdapterTest.swift; sourceTree = "<group>"; };
+		0646452528135684001EFDDC /* NetworkConnectionMockNil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionMockNil.swift; sourceTree = "<group>"; };
+		0646452728135B1D001EFDDC /* NetworkConnectionMockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionMockError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +151,9 @@
 		064644D6281099E5001EFDDC /* Klever ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				0646451E28134096001EFDDC /* Mock */,
 				064644D7281099E5001EFDDC /* Klever_ChallengeTests.swift */,
+				06464521281342C1001EFDDC /* BeerModelAdapterTest.swift */,
 			);
 			path = "Klever ChallengeTests";
 			sourceTree = "<group>";
@@ -247,6 +257,16 @@
 				064644C8281099E3001EFDDC /* ContentView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		0646451E28134096001EFDDC /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0646451F2813411F001EFDDC /* NetworkConnectionMockSucess.swift */,
+				0646452528135684001EFDDC /* NetworkConnectionMockNil.swift */,
+				0646452728135B1D001EFDDC /* NetworkConnectionMockError.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +422,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06464522281342C1001EFDDC /* BeerModelAdapterTest.swift in Sources */,
+				0646452628135684001EFDDC /* NetworkConnectionMockNil.swift in Sources */,
+				0646452828135B1D001EFDDC /* NetworkConnectionMockError.swift in Sources */,
+				064645202813411F001EFDDC /* NetworkConnectionMockSucess.swift in Sources */,
 				064644D8281099E5001EFDDC /* Klever_ChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
