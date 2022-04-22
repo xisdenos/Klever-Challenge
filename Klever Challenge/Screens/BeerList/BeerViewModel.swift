@@ -17,7 +17,7 @@ class BeerListViewModel: ObservableObject {
     
     func fetchBeers() {
         
-        BeerModelAdapter(networkConn: NetworkConnection()).fetchBeers { beer in
+        BeerModelAdapter(networkConn: NetworkConnection()).fetchBeers { beer, _ in
             if let beer = beer {
                 DispatchQueue.main.sync() {
                     self.beers = beer

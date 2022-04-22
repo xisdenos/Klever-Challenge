@@ -172,9 +172,9 @@
 		064644F82810A811001EFDDC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				0646450A28123F59001EFDDC /* EditBeer */,
 				064644F92810A81F001EFDDC /* BeerList */,
 				064645002811000C001EFDDC /* BeerFullInfo */,
+				0646450A28123F59001EFDDC /* EditBeer */,
 				064645052811D9AE001EFDDC /* AddNewBeer */,
 			);
 			path = Screens;

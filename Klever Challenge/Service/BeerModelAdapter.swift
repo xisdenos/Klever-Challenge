@@ -9,7 +9,12 @@ import Foundation
 
 protocol BeerModelAdapterProtocol {
     
-    func fetchBeers(completion: @escaping ([Beer]?) -> Void)
+    func fetchBeers(completion: @escaping ([Beer]?, Error?) -> Void)
+}
+
+enum ApiAdapterError: Error {
+    case InvalidData
+    case invalidParse
 }
 
 class BeerModelAdapter: BeerModelAdapterProtocol {
@@ -21,22 +26,21 @@ class BeerModelAdapter: BeerModelAdapterProtocol {
         self.networkConn = networkConn
     }
     
-    func fetchBeers(completion: @escaping ([Beer]?) -> Void) {
+    func fetchBeers(completion: @escaping ([Beer]?, Error?) -> Void) {
         
-        networkConn.makeRequest { data in
+        networkConn.makeRequest { data, error in
             guard let data = data else {
                 //Todo - Error Class
-                completion(nil)
+                completion(nil, ApiAdapterError.InvalidData)
                 return
             }
             
             do {
                 let beerData = try JSONDecoder().decode([Beer].self, from: data)
-                completion(beerData)
+                completion(beerData, nil)
                 return
             } catch {
-                //TODO - Error Class
-                completion(nil)
+                completion(nil, ApiAdapterError.invalidParse)
             }
         }
     }

@@ -9,18 +9,23 @@ import Foundation
 
 protocol NetworkConnectionProtocol {
     
-    func makeRequest(completion: @escaping (Data?) -> ())
+    func makeRequest(completion: @escaping (Data?, Error?) -> ())
+}
+
+enum ApiNetWorkError: Error {
+    case invalidURL
+    case InvalidSession
+    case invalidDataType
 }
 
 class NetworkConnection: NetworkConnectionProtocol {
     
     private let base_URL:String = "https://api.punkapi.com/v2/beers"
     
-    func makeRequest(completion: @escaping (Data?) -> ()) {
+    func makeRequest(completion: @escaping (Data?, Error?) -> ()) {
         
         guard let url = URL(string: base_URL) else {
-            //TODO - Error Class
-            completion(nil)
+            completion(nil, ApiNetWorkError.invalidURL)
             return
         }
         
@@ -28,16 +33,16 @@ class NetworkConnection: NetworkConnectionProtocol {
             
             if error != nil {
                 //TODO - Error Class
-                completion(nil)
+                completion(nil, ApiNetWorkError.InvalidSession)
             }
             
             guard let data = data else {
                 //TODO - Error Class
-                completion(nil)
+                completion(nil, ApiNetWorkError.invalidDataType)
                 return
             }
             
-            completion(data)
+            completion(data, nil)
         }
         task.resume()
     }
