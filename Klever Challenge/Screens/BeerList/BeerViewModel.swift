@@ -34,7 +34,10 @@ class BeerListViewModel: ObservableObject {
         beers.append(beer)
     }
     
-    func editBeer() {
-        
+    func editBeer(beer: Beer) {
+        let index = beers.firstIndex { beers in
+            beers.id == beer.id
+        }
+        beers[index!] = beer
     }
 }
