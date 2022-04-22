@@ -11,9 +11,11 @@ import SwiftUI
 class AddNewBeerViewModel: ObservableObject {
     
     var id: Int = UUID().hashValue
-    @Published var name: String = "Generic name"
-    @Published var tagline: String = "Very nice"
-    @Published var description: String = "Very very Nice"
+    @Published var name: String = ""
+    @Published var tagline: String = ""
+    @Published var description: String = ""
+    
+    // image_url not empty for pelo testing with generic image
     @Published var image_url: String = "https://images.punkapi.com/v2/keg.png"
     
     

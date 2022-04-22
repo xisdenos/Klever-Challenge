@@ -122,13 +122,11 @@
 		064644C5281099E3001EFDDC /* Klever Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				0646451B28133EC0001EFDDC /* App */,
 				0646451828132EA9001EFDDC /* Extensions */,
 				06464513281328E2001EFDDC /* Components */,
 				064644F82810A811001EFDDC /* Screens */,
 				064644F028109E11001EFDDC /* Service */,
-				064644C6281099E3001EFDDC /* Klever_ChallengeApp.swift */,
-				064644C8281099E3001EFDDC /* ContentView.swift */,
-				064644CA281099E5001EFDDC /* Assets.xcassets */,
 				064644CC281099E5001EFDDC /* Preview Content */,
 			);
 			path = "Klever Challenge";
@@ -239,6 +237,16 @@
 				0646451928132ED4001EFDDC /* BeerModel+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0646451B28133EC0001EFDDC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				064644CA281099E5001EFDDC /* Assets.xcassets */,
+				064644C6281099E3001EFDDC /* Klever_ChallengeApp.swift */,
+				064644C8281099E3001EFDDC /* ContentView.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -43,8 +43,8 @@ struct AddNewBeerView: View {
                 }
             }
             .alert("One or more itens are empty", isPresented: $alertIsPresented ) {
-                        Button("OK", role: .cancel) { }
+                Button("OK", role: .cancel) { }
+            }
         }
     }
-}
 }
