@@ -21,6 +21,7 @@ class AddNewBeerViewModel: ObservableObject {
         
     }
     
+    
     func publishNewBeer() -> Beer {
         let newBeer = Beer(id: Int(self.id), name: self.name, tagline: self.tagline, description: self.description, image_url: self.image_url)
         return newBeer

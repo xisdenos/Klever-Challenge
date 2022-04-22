@@ -27,6 +27,7 @@
 		06464512281240B6001EFDDC /* EditBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06464511281240B6001EFDDC /* EditBeerView.swift */; };
 		0646451528132905001EFDDC /* BeerInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646451428132905001EFDDC /* BeerInfoCell.swift */; };
 		0646451728132A28001EFDDC /* BeerListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646451628132A28001EFDDC /* BeerListCell.swift */; };
+		0646451A28132ED4001EFDDC /* BeerModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646451928132ED4001EFDDC /* BeerModel+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		06464511281240B6001EFDDC /* EditBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBeerView.swift; sourceTree = "<group>"; };
 		0646451428132905001EFDDC /* BeerInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerInfoCell.swift; sourceTree = "<group>"; };
 		0646451628132A28001EFDDC /* BeerListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCell.swift; sourceTree = "<group>"; };
+		0646451928132ED4001EFDDC /* BeerModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeerModel+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		064644C5281099E3001EFDDC /* Klever Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				0646451828132EA9001EFDDC /* Extensions */,
 				06464513281328E2001EFDDC /* Components */,
 				064644F82810A811001EFDDC /* Screens */,
 				064644F028109E11001EFDDC /* Service */,
@@ -228,6 +231,14 @@
 				0646451628132A28001EFDDC /* BeerListCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		0646451828132EA9001EFDDC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0646451928132ED4001EFDDC /* BeerModel+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +386,7 @@
 				06464504281100AF001EFDDC /* BeerInfoView.swift in Sources */,
 				064644C7281099E3001EFDDC /* Klever_ChallengeApp.swift in Sources */,
 				0646451728132A28001EFDDC /* BeerListCell.swift in Sources */,
+				0646451A28132ED4001EFDDC /* BeerModel+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,7 +30,6 @@ class BeerModelAdapter: BeerModelAdapterProtocol {
         
         networkConn.makeRequest { data, error in
             guard let data = data else {
-                //Todo - Error Class
                 completion(nil, ApiAdapterError.InvalidData)
                 return
             }

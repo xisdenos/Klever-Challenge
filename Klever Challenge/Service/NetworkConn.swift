@@ -32,12 +32,10 @@ class NetworkConnection: NetworkConnectionProtocol {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             
             if error != nil {
-                //TODO - Error Class
                 completion(nil, ApiNetWorkError.InvalidSession)
             }
             
             guard let data = data else {
-                //TODO - Error Class
                 completion(nil, ApiNetWorkError.invalidDataType)
                 return
             }

@@ -12,6 +12,7 @@ struct AddNewBeerView: View {
     @EnvironmentObject var beerVm: BeerListViewModel
     @Binding var isPresented: Bool
     @State private var viewModel: AddNewBeerViewModel = AddNewBeerViewModel()
+    @State var alertIsPresented: Bool = false
     
     var body: some View {
         
@@ -31,10 +32,19 @@ struct AddNewBeerView: View {
                     TextField("Enter name", text: self.$viewModel.image_url)}
             }
             
+            
+            
             Button("Create new Beer") {
-                beerVm.addNewBeer(beer: viewModel.publishNewBeer())
-                self.isPresented = false
+                if self.viewModel.publishNewBeer().checkIfNotEmptyOrNil() {
+                    beerVm.addNewBeer(beer: viewModel.publishNewBeer())
+                    self.isPresented = false
+                } else {
+                    self.alertIsPresented.toggle()
+                }
             }
+            .alert("One or more itens are empty", isPresented: $alertIsPresented ) {
+                        Button("OK", role: .cancel) { }
         }
     }
+}
 }

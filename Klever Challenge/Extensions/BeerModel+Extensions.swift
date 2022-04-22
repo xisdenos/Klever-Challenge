@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
+
+extension Beer {
+    
+    func checkIfNotEmptyOrNil() -> Bool {
+        
+        let members = [self.name, self.tagline, self.description, self.image_url]
+        
+        return members.allSatisfy { $0.isEmpty == false }
+    }
+}
