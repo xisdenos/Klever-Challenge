@@ -37,11 +37,4 @@ struct AddNewBeerView: View {
             }
         }
     }
-    
-        struct AddNewBeerView_Previews: PreviewProvider {
-            static var previews: some View {
-                AddNewBeerView(isPresented: .constant(false))
-            }
-        }
-    }
-
+}
