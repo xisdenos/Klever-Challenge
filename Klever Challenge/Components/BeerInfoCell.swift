@@ -29,6 +29,7 @@ struct BeerInfoCell: View {
             
             Text(beer.description)
                 .padding()
+                
         }
     }
 }

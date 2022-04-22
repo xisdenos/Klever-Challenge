@@ -19,10 +19,14 @@ struct BeerInfoView: View {
     
     var body: some View {
         
+        
+        
         NavigationView{
-            BeerInfoCell(beer: viewModel.beer)
-            
-        }.toolbar {
+            ScrollView {
+                BeerInfoCell(beer: viewModel.beer)
+            }
+        }
+        .toolbar {
             
             HStack{
                 Button {
