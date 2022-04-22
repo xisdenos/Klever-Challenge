@@ -21,7 +21,7 @@ struct BeerView: View {
             List {
                 ForEach(self.beers, id:\.id) { beer in
                     NavigationLink(destination: BeerInfoView(viewModel: BeerInfoViewModel(beer: beer))) {
-                        BeerCellView(beer: beer)
+                        BeerListCell(beer: beer)
                     }
                 }
             }
@@ -48,32 +48,6 @@ struct BeerView_Previews: PreviewProvider {
                               tagline: "generic beer",
                               description: "generic description",
                               image_url: "https://images.punkapi.com/v2/keg.png")])
-    }
-}
-
-struct BeerCellView: View {
-    
-    let beer: Beer
-    
-    var body: some View {
-        HStack{
-            AsyncImage(url: URL(string: beer.image_url)) { phase in
-                phase.resizable()
-            } placeholder: {
-                ProgressView()
-            }.frame(width: 100, height: 260)
-            
-                .padding()
-            VStack{
-                Text(beer.name)
-                    .font(.title .bold())
-                
-                    .padding()
-                
-                Text(beer.tagline)
-                    .font(.title2)
-            }
-        }
     }
 }
 
