@@ -53,31 +53,4 @@ struct BeerInfoView: View {
                                                                  image_url: "https://images.punkapi.com/v2/keg.png"))
         )}
     }
-    
-    struct BeerInfoCell: View {
-        
-        let beer: Beer
-        
-        var body: some View {
-            VStack{
-                
-                Text(beer.name)
-                    .font(.largeTitle .bold())
-                
-                Text(beer.tagline)
-                    .font(.title3)
-                    .padding()
-                
-                AsyncImage(url: URL(string: beer.image_url)) { phase in
-                    phase.resizable()
-                } placeholder: {
-                    ProgressView()
-                }.frame(width: 150, height: 360)
-                
-                Text(beer.description)
-                    .padding()
-            }
-            
-        }
-    }
 }
