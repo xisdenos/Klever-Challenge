@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BeerInfoView: View {
     
+    @EnvironmentObject var beerVm: BeerListViewModel
     var viewModel: BeerInfoViewModel
     
     init(viewModel: BeerInfoViewModel) {
@@ -31,7 +32,7 @@ struct BeerInfoView: View {
                 
                 
                 Button {
-                    viewModel.deleteBeer()
+                    beerVm.deleteBeer(beer: viewModel.deleteBeer())
                 } label: {
                     Label("Delete", systemImage: "trash")
                 }.foregroundColor(.red)

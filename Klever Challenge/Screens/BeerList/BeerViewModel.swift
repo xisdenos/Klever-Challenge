@@ -12,7 +12,6 @@ class BeerListViewModel: ObservableObject {
     @Published var beers = [Beer]()
     
     init() {
-        
         fetchBeers()
     }
     
@@ -27,11 +26,15 @@ class BeerListViewModel: ObservableObject {
         }
     }
     
-    func delete() {
-        print("dfd")
+    func deleteBeer(beer: Beer) {
+        beers = beers.filter {$0.id != beer.id}
     }
     
     func addNewBeer(beer: Beer) {
         beers.append(beer)
+    }
+    
+    func editBeer() {
+        
     }
 }

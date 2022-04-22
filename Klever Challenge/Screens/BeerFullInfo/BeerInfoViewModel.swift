@@ -16,8 +16,8 @@ class BeerInfoViewModel {
         self.beer = beer
     }
     
-    func deleteBeer() {
-        print("sdksjdks")
+    func deleteBeer() -> Beer {
+        return beer
     }
     
     func editBeer() {

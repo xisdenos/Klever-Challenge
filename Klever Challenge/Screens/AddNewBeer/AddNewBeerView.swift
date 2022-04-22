@@ -33,17 +33,15 @@ struct AddNewBeerView: View {
             
             Button("Create new Beer") {
                 beerVm.addNewBeer(beer: viewModel.publishNewBeer())
-//                self.viewModel.publishNewBeer()
                 self.isPresented = false
             }
         }
     }
     
-        
         struct AddNewBeerView_Previews: PreviewProvider {
             static var previews: some View {
                 AddNewBeerView(isPresented: .constant(false))
             }
         }
-}
+    }
 

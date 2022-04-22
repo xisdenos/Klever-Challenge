@@ -168,6 +168,7 @@
 		064644F82810A811001EFDDC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0646450A28123F59001EFDDC /* EditBeer */,
 				064644F92810A81F001EFDDC /* BeerList */,
 				064645002811000C001EFDDC /* BeerFullInfo */,
 				064645052811D9AE001EFDDC /* AddNewBeer */,
@@ -200,6 +201,13 @@
 				064645082811DF62001EFDDC /* AddNewBeerViewModel.swift */,
 			);
 			path = AddNewBeer;
+			sourceTree = "<group>";
+		};
+		0646450A28123F59001EFDDC /* EditBeer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EditBeer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
