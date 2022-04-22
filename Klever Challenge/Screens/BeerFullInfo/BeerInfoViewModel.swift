@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class BeerInfoViewModel {
     
@@ -16,8 +17,7 @@ class BeerInfoViewModel {
     }
     
     func deleteBeer() {
-        //Todo - delete function
-        print("delete")
+        print("sdksjdks")
     }
     
     func editBeer() {

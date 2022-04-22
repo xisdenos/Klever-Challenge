@@ -9,7 +9,8 @@ import SwiftUI
 
 struct BeerView: View {
     
-    let beers: [Beer]
+    var beers: [Beer]
+    @State private var showModal: Bool = false
     
     init(beers: [Beer]) {
         self.beers = beers
@@ -21,14 +22,31 @@ struct BeerView: View {
                 ForEach(self.beers, id:\.id) { beer in
                     NavigationLink(destination: BeerInfoView(viewModel: BeerInfoViewModel(beer: beer))) {
                         BeerCellView(beer: beer)
-                        
+                        }
                     }
+//                        .onDelete(perform: {IndexSet in
+//                            beers.remove(atOffsets: IndexSet)
+//                        })
+                }
+            .navigationBarTitle("Beers List")
+            .toolbar {
+                Button {
+                    self.showModal.toggle()
+                    
+                }
+                label: {
+                    Label("Add", systemImage: "plus")
+                }.foregroundColor(.red)
+                .sheet(isPresented: $showModal) {
+                    AddNewBeerView(isPresented: self.$showModal)
+            }
+            
+                    
                 }
             }
         }
-        .navigationBarTitle("Beers List")
     }
-}
+
 
 
     struct BeerView_Previews: PreviewProvider {

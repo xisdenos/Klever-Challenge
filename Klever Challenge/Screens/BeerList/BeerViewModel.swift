@@ -12,6 +12,7 @@ class BeerListViewModel: ObservableObject {
     @Published var beers = [Beer]()
     
     init() {
+        
         fetchBeers()
     }
     
@@ -19,14 +20,18 @@ class BeerListViewModel: ObservableObject {
         
         BeerModelAdapter(networkConn: NetworkConnection()).fetchBeers { beer in
             if let beer = beer {
-                DispatchQueue.main.sync {
+                DispatchQueue.main.sync() {
                     self.beers = beer
                 }
             }
         }
     }
     
-    func delete(beer: Beer) {
-        print(beer.name)
+    func delete() {
+        print("dfd")
+    }
+    
+    func addNewBeer(beer: Beer) {
+        beers.append(beer)
     }
 }

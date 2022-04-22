@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject private var beerVM = BeerListViewModel()
+    @ObservedObject private var beerVM: BeerListViewModel = BeerListViewModel()
     
     var body: some View {
         BeerView(beers: self.beerVM.beers)
+            .environmentObject(beerVM)
     }
 }
 
