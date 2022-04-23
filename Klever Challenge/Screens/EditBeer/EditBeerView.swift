@@ -22,13 +22,13 @@ struct EditBeerView: View {
                     TextField("Enter name", text: self.$viewModel.beer.name)}
                 
                 Section(header: Text("Beer tagline").font(.body)) {
-                    TextField("Enter name", text: self.$viewModel.beer.tagline)}
+                    TextField("Enter tagline", text: self.$viewModel.beer.tagline)}
                 
                 Section(header: Text("Beer description").font(.body)) {
-                    TextField("Enter name", text: self.$viewModel.beer.description)}
+                    TextField("Enter description", text: self.$viewModel.beer.description)}
                 
                 Section(header: Text("Beer image link").font(.body)) {
-                    TextField("Enter name", text: self.$viewModel.beer.image_url)}
+                    TextField("Enter image link", text: self.$viewModel.beer.image_url)}
             }
             
             Button("Edit Beer") {

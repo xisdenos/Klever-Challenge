@@ -23,13 +23,13 @@ struct AddNewBeerView: View {
                     TextField("Enter name", text: self.$viewModel.name)}
                 
                 Section(header: Text("Beer tagline").font(.body)) {
-                    TextField("Enter name", text: self.$viewModel.tagline)}
+                    TextField("Enter tagline", text: self.$viewModel.tagline)}
                 
                 Section(header: Text("Beer description").font(.body)) {
-                    TextField("Enter name", text: self.$viewModel.description)}
+                    TextField("Enter description", text: self.$viewModel.description)}
                 
                 Section(header: Text("Beer image link").font(.body)) {
-                    TextField("Enter name", text: self.$viewModel.image_url)}
+                    TextField("Enter image link", text: self.$viewModel.image_url)}
             }
             
             
