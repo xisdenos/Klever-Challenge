@@ -10,12 +10,7 @@ import SwiftUI
 struct BeerInfoView: View {
     
     @EnvironmentObject var beerVm: BeerListViewModel
-    @State private var showModal: Bool = false
-    var viewModel: BeerInfoViewModel
-    
-    init(viewModel: BeerInfoViewModel) {
-        self.viewModel = viewModel
-    }
+    @ObservedObject var viewModel: BeerInfoViewModel
     
     var body: some View {
         
@@ -30,17 +25,17 @@ struct BeerInfoView: View {
             
             HStack{
                 Button {
-                    self.showModal.toggle()
+                    viewModel.toogleModal()
                 } label: {
                     Label("Edita", systemImage: "pencil")
                 }
-                .sheet(isPresented: $showModal) {
-                    EditBeerView(isPresented: self.$showModal, viewModel: EditBeerViewModel(beer: viewModel.beer))
+                .sheet(isPresented: $viewModel.showModal) {
+                    EditBeerView(isPresented: $viewModel.showModal, viewModel: EditBeerViewModel(beer: viewModel.beer))
                 }
                 
                 
                 Button {
-                    beerVm.deleteBeer(beer: viewModel.deleteBeer())
+                    beerVm.deleteBeer(beer: viewModel.beer)
                 } label: {
                     Label("Delete", systemImage: "trash")
                 }.foregroundColor(.red)

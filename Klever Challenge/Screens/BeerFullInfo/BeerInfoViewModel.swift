@@ -11,13 +11,13 @@ import SwiftUI
 class BeerInfoViewModel: ObservableObject {
     
     @Published var beer: Beer
+    @Published var showModal: Bool = false
     
     init(beer: Beer) {
         self.beer = beer
     }
     
-    func deleteBeer() -> Beer {
-        return beer
+    func toogleModal() {
+        showModal.toggle()
     }
-    
 }
