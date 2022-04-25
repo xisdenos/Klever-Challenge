@@ -11,8 +11,7 @@ struct EditBeerView: View {
     
     @EnvironmentObject var beerVm: BeerListViewModel
     @Binding var isPresented: Bool
-    @State var viewModel: EditBeerViewModel
-    @State var alertIsPresented: Bool = false
+    @ObservedObject var viewModel: EditBeerViewModel
     
     var body: some View {
         VStack{
@@ -32,14 +31,12 @@ struct EditBeerView: View {
             }
             
             Button("Edit Beer") {
-                if (self.viewModel.beer.checkIfNotEmptyOrNil()){
+                if (viewModel.checkBeforePublish()){
                     beerVm.editBeer(beer: self.viewModel.beer)
                     self.isPresented = false
-                } else {
-                    self.alertIsPresented.toggle()
                 }
             }
-            .alert("One or more itens are empty", isPresented: $alertIsPresented ) {
+            .alert("One or more itens are empty", isPresented: $viewModel.alertIsPresented ) {
                 Button("OK", role: .cancel) { }
             }
         }
