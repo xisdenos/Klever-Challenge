@@ -10,6 +10,7 @@ import Foundation
 class BeerListViewModel: ObservableObject {
     
     @Published var beers = [Beer]()
+    @Published var showModal: Bool = false
     
     init() {
         fetchBeers()
@@ -24,6 +25,10 @@ class BeerListViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func toogleModal() {
+        self.showModal.toggle()
     }
     
     func deleteBeer(beer: Beer) {

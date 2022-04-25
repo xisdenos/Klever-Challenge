@@ -10,7 +10,7 @@ import SwiftUI
 struct BeerView: View {
     
     var beers: [Beer]
-    @State private var showModal: Bool = false
+    @ObservedObject private var viewModel: BeerListViewModel = BeerListViewModel()
     
     init(beers: [Beer]) {
         self.beers = beers
@@ -28,13 +28,13 @@ struct BeerView: View {
             .navigationBarTitle("Beers List")
             .toolbar {
                 Button {
-                    self.showModal.toggle()
+                    viewModel.toogleModal()
                 }
             label: {
                 Label("Add", systemImage: "plus")
             }.foregroundColor(.red)
-                    .sheet(isPresented: $showModal) {
-                        AddNewBeerView(isPresented: self.$showModal)
+                    .sheet(isPresented: $viewModel.showModal) {
+                        AddNewBeerView()
                     }
             }
         }
