@@ -14,13 +14,12 @@ struct BeerInfoView: View {
     
     var body: some View {
         
-        
-        
-        NavigationView{
-            ScrollView {
-                BeerInfoCell(beer: viewModel.beer)
-            }
+        ScrollView {
+            BeerInfoCell(beer: viewModel.beer)
+                .background(Color.yellow)
+                .cornerRadius(10)
         }
+        
         .toolbar {
             
             HStack{

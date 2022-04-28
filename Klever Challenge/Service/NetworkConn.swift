@@ -10,6 +10,7 @@ import Foundation
 protocol NetworkConnectionProtocol {
     
     func makeRequest(completion: @escaping (Data?, Error?) -> ())
+    func postRequest(beer: Beer, completion: @escaping (Error?) -> ())
 }
 
 enum ApiNetWorkError: Error {
@@ -20,7 +21,7 @@ enum ApiNetWorkError: Error {
 
 class NetworkConnection: NetworkConnectionProtocol {
     
-    private let base_URL:String = "https://api.punkapi.com/v2/beers"
+    private let base_URL:String = "https://6269eced737b438c1c3f6090.mockapi.io/beerlist"
     
     func makeRequest(completion: @escaping (Data?, Error?) -> ()) {
         
@@ -43,5 +44,9 @@ class NetworkConnection: NetworkConnectionProtocol {
             completion(data, nil)
         }
         task.resume()
+    }
+    
+    func postRequest(beer: Beer, completion: @escaping (Error?) -> ()) {
+        completion(nil)
     }
 }

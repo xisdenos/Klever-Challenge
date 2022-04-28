@@ -18,6 +18,10 @@ struct BeerView: View {
     
     var body: some View {
         NavigationView{
+            VStack{
+                
+                Text("Favorite Beers")
+                    .font(.largeTitle)
             List {
                 ForEach(self.beers, id:\.id) { beer in
                     NavigationLink(destination: BeerInfoView(viewModel: BeerInfoViewModel(beer: beer))) {
@@ -25,7 +29,10 @@ struct BeerView: View {
                     }
                 }
             }
-            .navigationBarTitle("Beers List")
+            
+            .listStyle(PlainListStyle())
+            .navigationBarTitle("Favorite Beers!")
+            .navigationBarHidden(true)
             .toolbar {
                 Button {
                     viewModel.toogleModal()
@@ -37,6 +44,7 @@ struct BeerView: View {
                         AddNewBeerView()
                     }
             }
+        }
         }
     }
 }
