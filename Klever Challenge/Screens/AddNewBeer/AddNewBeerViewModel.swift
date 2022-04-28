@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AddNewBeerViewModelValues {
     
-    var id: Int = UUID().hashValue
+    var id: String = String(UUID().hashValue)
     var name: String = ""
     var tagline: String = ""
     var description: String = ""
@@ -30,7 +30,7 @@ class AddNewBeerViewModel: ObservableObject {
     
     func publishNewBeer() -> Beer {
         
-        let newBeer = Beer(id: Int(values.id),
+        let newBeer = Beer(id: values.id,
                            name: self.values.name,
                            tagline: self.values.tagline,
                            description: self.values.description,

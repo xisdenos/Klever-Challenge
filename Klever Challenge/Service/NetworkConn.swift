@@ -10,13 +10,18 @@ import Foundation
 protocol NetworkConnectionProtocol {
     
     func makeRequest(completion: @escaping (Data?, Error?) -> ())
-    func postRequest(beer: Beer, completion: @escaping (Error?) -> ())
+    func postRequest(beer: Data, completion: @escaping (Error?) -> ())
+    func deleteRequest(beerId: String, completion: @escaping(Error?) -> ())
+    func updateBeer(beerId: String, beer: Data, completion: @escaping (Error?) -> ())
 }
 
 enum ApiNetWorkError: Error {
     case invalidURL
     case InvalidSession
     case invalidDataType
+    case invalidPostRequisition
+    case invalidDeleteRequisition
+    case invalidPutRequisition
 }
 
 class NetworkConnection: NetworkConnectionProtocol {
@@ -46,7 +51,72 @@ class NetworkConnection: NetworkConnectionProtocol {
         task.resume()
     }
     
-    func postRequest(beer: Beer, completion: @escaping (Error?) -> ()) {
-        completion(nil)
+    
+    func postRequest(beer: Data, completion: @escaping (Error?) -> ()) {
+        
+        guard let url = URL(string: "\(base_URL)") else {
+            completion(ApiNetWorkError.invalidURL)
+            return
+        }
+        
+        var requisition = URLRequest(url: url)
+        requisition.httpMethod = "POST"
+        requisition.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        requisition.httpBody = beer
+        
+        let task = URLSession.shared.dataTask(with: requisition) { _ , _ , error in
+            
+            if error != nil {
+                completion(ApiNetWorkError.invalidPostRequisition)
+            }
+            
+            completion(nil)
+        }
+        task.resume()
+    }
+    
+    func deleteRequest(beerId: String, completion: @escaping(Error?) -> ()) {
+        
+        guard let url = URL(string: "\(base_URL)/\(beerId)") else {
+            completion(ApiNetWorkError.invalidURL)
+            return
+        }
+        
+        var requisition = URLRequest(url: url)
+        requisition.httpMethod = "DELETE"
+        
+        let task = URLSession.shared.dataTask(with: requisition) { _ , _ , error in
+            
+            if error != nil {
+                completion(ApiNetWorkError.invalidDeleteRequisition)
+            }
+            
+            completion(nil)
+        }
+        task.resume()
+        
+    }
+    
+    func updateBeer(beerId: String, beer: Data, completion: @escaping (Error?) -> ()) {
+        
+        guard let url = URL(string: "\(base_URL)/\(beerId)") else {
+            completion(ApiNetWorkError.invalidURL)
+            return
+        }
+        
+        var requisition = URLRequest(url: url)
+        requisition.httpMethod = "PUT"
+        requisition.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        requisition.httpBody = beer
+        
+        let task = URLSession.shared.dataTask(with: requisition) { _ , _ , error in
+            
+            if error != nil {
+                completion(ApiNetWorkError.invalidPutRequisition)
+            }
+            
+            completion(nil)
+        }
+        task.resume()
     }
 }

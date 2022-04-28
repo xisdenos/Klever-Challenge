@@ -9,7 +9,7 @@ import Foundation
 
 struct Beer: Decodable {
     
-    var id: Int
+    var id: String
     var name: String
     var tagline: String
     var description: String
